@@ -1,0 +1,115 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container{
+    width:100vw;
+    height:100vh;
+    background: linear-gradient(130deg,#8706ff,#025b85);
+    display: flex;
+    align-items: center;
+}
+
+.Calculator-box{
+    width: 40vw;
+    height: 35vh;
+    margin-left: 10vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    
+}
+.heading{
+    font-size: 70px;
+    background: linear-gradient(40deg, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom:20px ;
+  
+}
+
+.Calculator-box h3{
+    font-size: 40px;
+    background: linear-gradient(40deg, #fbff10, #efff10);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+.input-box{
+    
+    border: 2px solid rgb(110, 186, 253) ;
+    backdrop-filter:blur(10px);
+    border-radius: 10px;
+    display: flex;
+    height: auto;
+    padding: 30px;
+    background-color: rgb(116, 186, 248);
+    gap: 20px;
+}
+
+.input-box input {
+    position: relative;
+    flex: 1;
+    padding: 20px;
+    background-color: rgb(253, 255, 255);
+    border-radius: 20px;
+    font-size: 20px;
+    border: none;
+}
+
+.input-box input::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;    /* ⚠️ CRITICAL: Even with top:0; left:0; right:0; bottom:0;, 
+                       if width and height are not auto, the element won't stretch */
+    height: auto;   /* ⚠️ CRITICAL: Pseudo-elements have default intrinsic sizes 
+                       that must be overridden with auto to actually fill the space */
+    background-position: calc(100% - 10px);
+    background-size: 30px;
+    cursor: pointer;
+}
+
+.input-box button{
+    padding: 18px 24px 18px 24px; 
+    background-color: #6c09ee;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    border: 2px solid #6c09ee;
+    font-size: 20px;
+    font-weight: 400;
+
+    transition: 
+        background-color 0.3s ease, 
+        color 0.3s ease,
+        border 0.3s ease,
+        transform 0.08s ease; 
+
+        /* Apply separate transition timings:
+        - Hover (color, background, border): smooth animation
+        - Active (transform): quick press feedback */
+}
+
+.input-box button:hover{
+    
+    border: 2px solid #6c09ee;
+    color: #6c09ee;
+    background-color: white;
+   
+}
+.input-box button:active {
+    transform: scale(0.95);
+}
+
+.Calculator-box p{
+    color: white;
+    font-size: 30px;
+    margin-top: 10px;
+}
